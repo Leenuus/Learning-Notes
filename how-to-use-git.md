@@ -1,4 +1,6 @@
-# One way to initialize a repo
+# Some learning notes for github and git
+
+## new repo workflow
 
 To initialize a repo, use command below.
 
@@ -35,3 +37,24 @@ ssh-add key
 After setup local ssh keys, copy and paste your public key to github ssh manager.
 
 To copy your public key, use `cat key.pub` and copy the text shown in your terminal.
+
+## basic git usage
+
+```shell
+git checkout -b <branch-name> # to checkout a branch or create a branch
+git branch -M <new-branch-name> # to rename current branch
+git stash # as a way to make some no sure changes
+git squash # compress many commits into one commit
+git push --set-upstream <remote-name> <new-branch> # push a new branch to remote
+```
+
+## troubleshootings
+
+### error: src refspec main does not match any
+
+1. check whether your local repo set remote
+2. check whether your local repo have first commmit
+
+### everything is up to date
+
+This message appears when you do not commit anything before pushing to remote repo.
