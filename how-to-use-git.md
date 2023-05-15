@@ -46,6 +46,8 @@ git branch -M <new-branch-name> # to rename current branch
 git stash # as a way to make some no sure changes
 git squash # compress many commits into one commit
 git push --set-upstream <remote-name> <new-branch> # push a new branch to remote
+git restore . # discard all changes made after last commit; new file won't be removed
+git clean -f # help git restore to remove new files
 ```
 
 ## troubleshootings
