@@ -40,14 +40,14 @@ To copy your public key, use `cat key.pub` and copy the text shown in your termi
 
 ## basic git usage
 
-```shell
+```bash
 git checkout -b <branch-name> # to checkout a branch or create a branch
 git branch -M <new-branch-name> # to rename current branch
 git stash # as a way to make some no sure changes
-git squash # compress many commits into one commit
 git push --set-upstream <remote-name> <new-branch> # push a new branch to remote
 git restore . # discard all changes made after last commit; new file won't be removed
 git clean -f # help git restore to remove new files
+git rebase -i HEAD~<count-of-commits-to-squash> # git squash, combine n commits into one commit, follow the instructions of interactive mode(-i option)
 ```
 
 ## troubleshootings
