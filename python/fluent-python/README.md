@@ -23,6 +23,12 @@
 
 ## part4 control flow
 
+1. itertools usage, drop_while, cycle, count
+2. generator(classic), use `.send` to build a generator, use generator to build a context manager
+3. use asyncio. how to start a event loop, how to register a task
+4. use thread for io-bound tasks; use process for cpu-bound tasks. use Event to send a signal to a thread instance, handle this exception inside thread; 
+5. use executor to spawn thread and process, `concurrent.futures` module
+
 ## part5 metaprogramming
 
 1. how to use `__getattr__`
