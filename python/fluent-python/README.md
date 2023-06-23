@@ -2,6 +2,24 @@
 
 ## part1 data structures
 
+### primitive compound data structures
+
+1. match case syntax, `int() float() str()` runtime type cheking
+2. dict usage: dict comprehesion; `__missing__` method for fallback; inherit `collections.UserDict` to build custom dict type; use `typing.MappingProxyType` to build immutable mapping; `keys()` and `values()` return a view of mapping, views are iterable and don't support subscript, when the dict update, the view update too.
+3. trick to reserve order and filter duplicated of a list: `dict.from_keys(l).keys()`
+4. set and frozenset, the former is mutable, and the latter is immutable; how to use set comprehension; set typing `{...}`; empty set `set()` and set literal eg. `{1, 2, 3}`; subset relationship `s1 >= s2` means s2 is a subset of s1, without `=` means proper subset(真子集)
+
+### bytes and str
+
+1. `bytes('str', encoding='utf8')`
+2. difference between slice of bytes, still bytes; and index of bytes, a byte, a integer smaller than 256
+3. use `unicodedata.normalize` to normalize different form of same string, always normalize string into `NFC` composed type before saving(default from keyboard drivesr)
+
+### data class builder
+
+1. `__annotation__` in dataclass and NamedTuple holds the type of a field, which you can get using `inspect.get_annotation(MyClass)` and `typing.get_type_hints(Myclass)`
+2. make class on the fly(in runtime), use `namedtuple` and `dataclasses.make_dataclass` functions
+
 ## part2 functions as object
 
 1. how to write custom decorator, both class-based and function-based; how to write decorator receiving arguments
@@ -33,3 +51,7 @@
 
 1. how to use `__getattr__`
 2. how to write custom descriptor
+
+### meta class
+
+no done yet
